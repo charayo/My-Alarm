@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+
+<body class=" pt-5  mt-4 container w-100 bg-dar" id="body">
+    <div class="container card  pt-4 pb-5 shadow-lg text-center" style="position: relative;">
+        <div class="container ">
+            <img src="alarm3.jpg" alt="" class="w-50 mt-5">
+        </div>
+
+        <div class="container bg-warning rounded pt-4 pb-4 mb-3 mt-5  text-white font-weight-bold font-bold h1 heading" style="border-radius: 50%;">
+            <span id="hrDisp" class="mr-1">00</span><span class="mr-1">:</span><span id="minDisp" class="mr-1">00</span><span class="mr-1">:</span><span id="secDisp" class="mr-1">00</span><span id="dayNigth" class="">AM</span>
+        </div>
+
+        <div class="container  pt-3 mt-4 mb-5" id="mano">
+            <div class="mb-5">
+                <select name="HR" id="hrSe">
+                    <option value="00">00</option>
+                </select><label for="">Hr</label>
+                <span>:</span>
+                <select name="Min" id="minSe" style="width: 50pjx" class="">
+                    <option value="00">00</option>
+                </select><label for="">Min</label>
+                <select name="dayNight" id="dnSe">
+                    <option value="AM">AM</option>
+                    <option value="PM">PM</option>
+                </select>
+            </div>
+            <div class="mb-5">
+                <input type="button" id="btn" class="btn shadow form-control mt-g5 mb-f3 w-50" value="Set Time" onclick="setUp()">
+            </div>
+
+        </div>
+
+        <audio src="sound.mp3" autoplay loop id="sndAlarm"></audio>
+
+        <div class="card shadow  bg-danger  text-white d-none" id="snooze">
+            <h5 class="p-3 m-1">Set Snooze Time </h5>
+            <div class=" mb-2">
+                <select name="" id="snoozeSe">
+                    <option value="">min</option>
+                    <option value="5">5min</option>
+                    <option value="10">10min</option>
+                    <option value="15">15min</option>
+                    <option value="30">30min</option>
+                </select>
+            </div>
+
+            <div class="container">
+                <button class="w-25 p-2" id="snoozeBtn">Snooze</button>
+                <button class="w-25 p-2" id="stpBtn">Stop</button>
+            </div>
+
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
